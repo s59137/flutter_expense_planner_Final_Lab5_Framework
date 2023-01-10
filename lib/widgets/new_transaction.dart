@@ -88,11 +88,15 @@ class _NewTransactionState extends State<NewTransaction> {
                     ),
                   ),
                   TextButton(
+                    style: TextButton.styleFrom(
+                      foregroundColor:
+                          Theme.of(context).primaryColor, // Text Color
+                    ),
                     child: Text(
                       'Choose Date',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).primaryColor),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     onPressed: _presentDatePicker,
                   ),
@@ -102,11 +106,12 @@ class _NewTransactionState extends State<NewTransaction> {
             ElevatedButton(
               child: Text('Add Transaction'),
               style: ElevatedButton.styleFrom(
+                backgroundColor:
+                    Theme.of(context).primaryColor, // Background color
                 foregroundColor: Theme.of(context)
                     .textTheme
                     .button
-                    .color, //change background color of button
-                backgroundColor: Theme.of(context).primaryColor,
+                    .color, // Text Color (Foreground color)
               ),
               onPressed: _submitData,
             ),
